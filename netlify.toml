@@ -1,0 +1,11 @@
+# 作り方を決めたら command と publish を合わせる（Vite なら npm run build と dist）
+[build]
+  publish = "public"
+
+# 架空のサービスなので、検索エンジンに載せない
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
